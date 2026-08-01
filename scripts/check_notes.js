@@ -39,7 +39,8 @@ for (const f of files) {
 
   // 1. WikiLink
   for (const m of scrubbed.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
-    const target = m[1].trim();
+    // 表セル内の別名リンク [[target\|alias]] は末尾にエスケープ用の \ が残るため除去する
+    const target = m[1].trim().replace(/\\$/, "");
     const base = target.split("/").pop();
     if (!basenames.has(base)) {
       console.log(`ERROR ${rel}: リンク切れ [[${target}]]`);
