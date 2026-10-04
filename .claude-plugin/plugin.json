@@ -1,0 +1,13 @@
+{
+  "name": "research-vault",
+  "description": "Create and maintain a sourced Markdown research vault with topic indexes, integrity checks, and freshness management.",
+  "author": {
+    "name": "Eruto Kondo",
+    "email": "erutobusiness@gmail.com"
+  },
+  "homepage": "https://github.com/eruto-skills/research-vault",
+  "repository": "https://github.com/eruto-skills/research-vault",
+  "license": "MIT",
+  "version": "1.1.0",
+  "skills": "./skills/"
+}
